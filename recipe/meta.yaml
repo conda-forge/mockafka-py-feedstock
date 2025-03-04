@@ -1,5 +1,5 @@
 {% set name = "mockafka-py" %}
-{% set version = "0.1.61" %}
+{% set version = "0.1.63" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mockafka_py-{{ version }}.tar.gz
-  sha256: cd3c8320f2e7552cbf1641a6da0bb1124f5388789e2408b2e99d978cfcc61fda
+  sha256: bb94600946ec58200cfadce2ae5b8a4c8bd05c286a8ad064693e8b2b5e455f34
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,8 +23,6 @@ requirements:
     - python >={{ python_min }},<4.0
     - aiokafka >=0.10.0,<0.12.0
     - python-confluent-kafka >=1.9.2
-    - pytest-asyncio >=0.23.5,<0.24.0
-    - pytest-cov >=4.1,<6.0
     - typing-extensions >=4.12.2,<5.0.0
 
 test:
