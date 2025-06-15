@@ -1,5 +1,5 @@
 {% set name = "mockafka-py" %}
-{% set version = "0.1.63" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mockafka_py-{{ version }}.tar.gz
-  sha256: bb94600946ec58200cfadce2ae5b8a4c8bd05c286a8ad064693e8b2b5e455f34
+  sha256: bcffff79367eed8646feb52510491ab369ab4179d005f8900429d8adef8a17fe
 
 build:
   noarch: python
